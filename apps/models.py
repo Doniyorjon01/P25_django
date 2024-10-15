@@ -20,6 +20,7 @@ class Product(models.Model):
 
 class User(models.Model):
     name = CharField(max_length=255)
+    headshot = models.ImageField(null=True, blank=True, upload_to="hero_headshots/")
 
     class Meta:
         db_table = "product_user"
